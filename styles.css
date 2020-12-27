@@ -665,6 +665,8 @@ h2 {
 
 .contact_us_div {
   display: flex;
+  flex-flow: column;
+  align-items: center;
   position: absolute;
   top: 35%;
   left: 30%;
@@ -675,6 +677,7 @@ h2 {
 
 .block_contact {
   display: flex;
+  flex-flow: column;
   justify-content: center;
   width: 100vw;
   height: 30vh;
@@ -682,11 +685,130 @@ h2 {
   background-size: cover;
 }
 
+.contact_us_h2 {
+  font-family: GothamMedium;
+  font-size: 44px;
+}
+
+.contact_us_subdiv {
+  display: flex;
+  width: 90%;
+  border: 1px solid black;
+}
+
+.conact__info {
+  display: flex;
+  flex-flow: column;
+  width: 50%;
+}
+
+.contact__p {
+  font-family: GothamBook;
+  margin: 15px 0 0 5px;
+  font-size: 18px;
+}
+
+.submit_form {
+  display: flex;
+  flex-flow: column;
+  width: 50%;
+  /* border: 1px solid red; */
+}
+
+/* .location__adress {
+  display: flex;
+  position: relative;
+}
+.location__adress:before {
+  content: '';
+  background: url('src/svg/location.svg') no-repeat;
+  background-size: fill;
+  top: 15%;
+  left: -5%;
+  fill: red;
+  width: 10px;
+  height: 10px;
+  border: 1px solid green;
+  position: absolute;
+  z-index: 555;
+} */
+
+.submit__btn {
+  all: unset;
+  display: flex;
+  align-self: flex-end;
+  font-family: GothamBook;
+  margin: 30px 0;
+  text-transform: uppercase;
+  font-size: 14px;
+  justify-content: center;
+  align-items: center;
+  height: 50px;
+  width: 140px;
+  border: 1px solid #000;
+  cursor: pointer;
+  transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+}
+
+.submit__btn:hover {
+  box-shadow: 0 4px 4px 4px rgba(0, 0, 0, 0.15);
+  border: 1px solid #7d5df9;
+}
+
+.form__input {
+  all: unset;
+  height: 60px;
+  font-family: GothamBook;
+  border-bottom: 1px solid rgb(95, 93, 93);
+  transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+}
+
+.form__input:focus {
+  border-bottom: 1px solid #7d5df9;
+}
+
 .block_footer {
   display: flex;
+  flex-flow: column;
   width: 770px;
   align-self: center;
-  margin-top: 30px;
+  margin-top: 50px;
+  justify-content: space-between;
+  /* align-items: center; */
+}
+
+.block_footer_inner {
+  display: flex;
   justify-content: space-between;
   align-items: center;
+}
+
+.footer_credentials {
+  display: flex;
+}
+
+.copyright_txt {
+  color: #fff;
+  font-family: GothamBook;
+  font-size: 14px;
+  margin-right: 26px;
+  position: relative;
+}
+
+.copyright_txt::after {
+  content: '';
+  display: flex;
+  width: 0.5px;
+  height: 30px;
+  border-left: 1px solid #fff;
+  position: absolute;
+  bottom: -45%;
+  left: 110%;
+}
+
+.made_by {
+  color: #fff;
+  font-family: GothamBook;
+  font-size: 14px;
+  margin-left: 20px;
 }

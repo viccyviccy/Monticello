@@ -49,15 +49,16 @@ function initMap() {
     lng: -73.9681
   };
   const map = new google.maps.Map(document.getElementById("map"), {
-    zoom: 12,
+    zoom: 13,
     center: myLatLng,
     fullscreenControl: true,
     zoomControl: true,
+    scrollwheel: false,
     streetViewControl: false
   });
   new google.maps.Marker({
     position: myLatLng,
     map,
-    title: "Hello World!"
+    title: "Monticello"
   });
 };
