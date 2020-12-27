@@ -8,10 +8,13 @@ $('.multiple-items').slick({
     const thumb = $(slider.$slides[i]).data('thumb');
     return '<a class="dot"></a>';
 },
-  slidesToScroll: 3,
+  slidesToScroll: 1,
   slidesToShow: 3,
+  autoplaySpeed: 4000,
+  speed: 2000,
   adaptiveHeight: true,
   autoplay: true,
+  infinite: true,
   mobileFirst:true,
   arrows:true,
   nextArrow: '<div class="next_arrow"></div>',
@@ -20,27 +23,16 @@ $('.multiple-items').slick({
   touchMove: true,
 
 });
+});
+
 
 //  ------- SCROOLLING -------
 
-// $("#fullpage").fullpage({
-//   navigation: false,
-//   onLeave: function(origin, destination, direction) {
-//     if (direction == "down") {
-//       $carousel.slick("slickNext");
-//     } else if (direction == "up") {
-//       $carousel.slick("slickPrev");
-//     }
-//   }
-// });
-//  ----------- SCROOLLING END ----------
-
-});
 
 $(document).ready(function() {
 	$('#fullpage').fullpage({
     //options here
-    anchors:['monticello','what-we-do', 'project1', 'project2', 'reviews', 'gallery', 'contacts'],
+    anchors:['monticello','what-we-do', 'project', 'reviews', 'gallery', 'contacts'],
 		autoScrolling:true,
 		scrollHorizontally: true
 	});
@@ -48,3 +40,24 @@ $(document).ready(function() {
 	//methods
 	$.fn.fullpage.setAllowScrolling(true);
 });
+
+// google maps
+
+function initMap() {
+  const myLatLng = {
+    lat: 40.6725,
+    lng: -73.9681
+  };
+  const map = new google.maps.Map(document.getElementById("map"), {
+    zoom: 12,
+    center: myLatLng,
+    fullscreenControl: true,
+    zoomControl: true,
+    streetViewControl: false
+  });
+  new google.maps.Marker({
+    position: myLatLng,
+    map,
+    title: "Hello World!"
+  });
+};

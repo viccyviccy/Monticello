@@ -227,9 +227,6 @@ h2 {
   width: 100vw;
   height: 100vh;
   margin: 0;
-  /* background-color: #fff;
-  z-index: -2; */
-  border: 1px solid black;
 }
 
 .page2_main_div {
@@ -427,13 +424,20 @@ h2 {
 .news_slider_item {
   display: flex;
   flex-flow: column;
+  margin: 12px;
   width: 370px;
   height: 520px;
   background-color: #fff;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+  transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+}
+
+.news_slider_item:hover {
+  cursor: pointer;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.25), 0 8px 8px rgba(0, 0, 0, 0.22);
 }
 
 .slick-active > .dot {
-  /* height: 48px; */
   background-color: #fff;
   box-shadow: 0 4px 4px 4px rgba(0, 0, 0, 0.15);
   border: 0.5px dotted #56b7fe;
@@ -579,7 +583,6 @@ h2 {
   display: flex;
   flex-flow: nowrap;
   justify-content: space-between;
-  border: 1px solid black;
 }
 
 .small_img_gallery {
@@ -590,11 +593,9 @@ h2 {
 
 .small_img_gallery:nth-child(4n) {
   padding-top: 8px;
-  /* align-self: bottom; */
 }
 .small_img_gallery:nth-child(3n) {
   padding-top: 8px;
-  /* align-self: bottom; */
 }
 
 .multiply_img {
@@ -630,7 +631,9 @@ h2 {
   justify-content: center;
   width: 100vw;
   height: 100vh;
-  background-color: rgba(128, 128, 128, 0.514);
+  /* background-color: rgba(128, 128, 128, 0.514); */
+  /* background: url('src/img/bckg3.png');
+  background-size: cover; */
 }
 
 .page6_main {
@@ -639,7 +642,46 @@ h2 {
 
 .page6_main_div {
   display: flex;
-  /* align-items: center; */
+  flex-flow: column;
+  position: relative;
 }
 
-/* _______________PAGE______SCROLLING___________________ */
+.map_wrapper {
+  display: flex;
+  align-self: flex-start;
+  width: 100vw;
+  height: 70vh;
+}
+
+#map {
+  height: 100%;
+  width: 100%;
+}
+
+.contact_us_div {
+  display: flex;
+  position: absolute;
+  top: 35%;
+  left: 30%;
+  background-color: #fff;
+  width: 770px;
+  height: 450px;
+}
+
+.block_contact {
+  display: flex;
+  justify-content: center;
+  width: 100vw;
+  height: 30vh;
+  background: url('src/img/bckg3.png');
+  background-size: cover;
+}
+
+.block_footer {
+  display: flex;
+  width: 770px;
+  align-self: center;
+  margin-top: 30px;
+  justify-content: space-between;
+  align-items: center;
+}
