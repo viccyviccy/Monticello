@@ -177,6 +177,11 @@ h2 {
   border: 1px solid #56b7fe;
 }
 
+.social_url {
+  width: 40px;
+  height: 40px;
+}
+
 .facebook {
   background: url('src/svg/facebook_.svg') no-repeat center;
   background-size: 10px;
